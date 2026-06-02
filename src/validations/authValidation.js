@@ -35,8 +35,8 @@ const validateLogin = (req, res, next) => {
         throw ApiError.badRequest('E-mail inválido');
     }
 
-    if (!password || password.length < 6) {
-        throw ApiError.badRequest('Senha deve ter no mínimo 6 caracteres');
+    if (!password) {
+        throw ApiError.badRequest('Senha é obrigatória');
     }
 
     next();
