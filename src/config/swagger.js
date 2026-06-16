@@ -15,8 +15,12 @@ const options = {
     },
     servers: [
       {
+        url: process.env.RENDER_EXTERNAL_URL || 'http://localhost:3000',
+        description: process.env.RENDER_EXTERNAL_URL ? 'Servidor de Produção' : 'Servidor Local',
+      },
+      {
         url: 'http://localhost:3000',
-        description: 'Servidor de Desenvolvimento',
+        description: 'Servidor de Desenvolvimento Local',
       },
     ],
     components: {
